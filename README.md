@@ -2,75 +2,42 @@
 
 ## Project Overview
 
-An end-to-end data analytics project based on the Sample Superstore dataset (2014–2017).
+An end-to-end data analytics project focused on retail sales performance, profitability, customer behavior, product performance, discount impact, and shipping operations.
 
-The goal of this project is to analyze sales performance, profitability, customer behavior, product performance, discount impact, and shipping operations to identify business trends and provide data-driven recommendations.
-
-## Business Objectives
-
-- Analyze overall sales and profit performance.
-- Identify the most and least profitable product categories.
-- Evaluate regional and customer segment performance.
-- Investigate the relationship between discounts and profitability.
-- Analyze monthly and annual sales trends.
-- Evaluate shipping processing time across shipping methods.
-
-## Tools & Technologies
-
-| Tool | Purpose |
-|---|---|
-| Python (Pandas, Matplotlib) | Data cleaning, exploration and analysis |
-| PostgreSQL | Data storage and SQL analysis |
-| SQL | Business queries and aggregations |
-| Power BI | Interactive dashboard and visualization |
-| Git & GitHub | Version control and project documentation |
-
-## Dataset
-
-**Sample Superstore Dataset**
-
-- Period: 2014–2017
-- Records: 9,994
-- Unique orders: 5,009
-- Unique customers: 793
-- Original columns: 21
-- Final dataset columns: 25
-
-## Key Performance Indicators
-
-| Metric | Result |
-An end-to-end data analytics project focused on analyzing retail sales, profitability, customer behavior, product performance, discount impact, and shipping operations.
-
-The project demonstrates a complete analytical workflow, from data preparation and exploratory analysis to SQL-based business analysis and interactive Power BI reporting.
+The project demonstrates a complete analytical workflow, including data cleaning, exploratory data analysis, SQL-based business analysis, and interactive Power BI reporting.
 
 ## About the Sample Superstore Dataset
 
-**Sample Superstore** is a widely used educational dataset designed for practicing data analysis and business intelligence.
+**Sample Superstore** is a fictional retail dataset widely used for educational purposes and practicing data analytics and business intelligence.
 
-It represents the sales operations of a fictional retail company selling office supplies, furniture, and technology products.
+It represents the operations of a fictional retail company selling three main product categories:
 
-The dataset contains transactional information, including:
-- Customer information and customer segments
+- Furniture
+- Office Supplies
+- Technology
+
+The dataset contains transactional information about orders, customers, products, sales, profits, discounts, and shipping.
+
+It includes:
+- Order and shipping dates
+- Customer IDs and customer segments
 - Product categories and sub-categories
-- Sales, profit, quantity, and discounts
-- Order dates and shipping dates
-- Geographic information, including regions, states, and cities
+- Sales, profit, quantity, and discount values
+- Geographic information (country, state, city, and region)
 - Shipping methods
 
-The dataset is commonly used to practice exploratory data analysis, SQL queries, business intelligence, and dashboard development.
-
-**Important:** The dataset contains fictional business transactions and should not be interpreted as actual company performance.
+**Note:** Sample Superstore contains fictional business transactions. The results of this project should not be interpreted as the actual performance of a real company.
 
 ### Dataset Overview
 
 | Attribute | Value |
 |---|---:|
-| Time period | 2014–2017 |
-| Original records | 9,994 |
-| Unique orders | 5,009 |
-| Unique customers | 793 |
-| Original columns | 21 |
-| Final processed columns | 25 |
+| Period | 2014–2017 |
+| Records | 9,994 |
+| Unique Orders | 5,009 |
+| Unique Customers | 793 |
+| Original Columns | 21 |
+| Final Processed Columns | 25 |
 
 ## Project Objectives
 
@@ -79,14 +46,14 @@ The dataset is commonly used to practice exploratory data analysis, SQL queries,
 - Evaluate regional and customer segment performance.
 - Investigate the relationship between discounts and profitability.
 - Analyze monthly and annual sales trends.
-- Evaluate shipping processing time.
+- Evaluate shipping processing times.
 - Identify customers and products generating losses.
 
 ## Tools & Technologies
 
 | Tool | Purpose |
 |---|---|
-| Python | Data cleaning, exploratory data analysis |
+| Python | Data cleaning and exploratory data analysis |
 | Pandas | Data manipulation and analysis |
 | Matplotlib | Data visualization |
 | PostgreSQL | Database management and SQL analysis |
@@ -130,7 +97,7 @@ The dataset is commonly used to practice exploratory data analysis, SQL queries,
 - Transactions with discounts between 41% and 80% had negative average profit.
 - The findings suggest that discount policies may require further evaluation.
 
-*Note: These findings indicate an association, not necessarily causation.*
+*These findings indicate an association, not necessarily causation.*
 
 ### 5. Customer Analysis
 
@@ -157,32 +124,9 @@ Average order-to-ship processing time:
 
 *This metric measures the time between order placement and shipment, not final delivery time.*
 
-## Project Structure
-
-```text
-sales-performance-analysis/
-│
-├── dashboard/
-│   ├── dashboard_screenshots/
-│   ├── Superstore Sales Analytics.pdf
-│   └── Superstore Sales Analytics.pbix
-│
-├── data/
-│   └── superstore_final.csv
-│
-├── python/
-│   └── sales_analysis.ipynb
-│
-├── sql/
-│   └── sales_analysis.sql
-│
-├── .gitignore
-└── README.md
-```
-
 ## Python Analysis
 
-The Jupyter Notebook contains the following stages:
+The Jupyter Notebook covers the following stages:
 
 - Project setup and data loading
 - Initial data exploration
@@ -206,15 +150,16 @@ PostgreSQL was used to perform business-oriented analysis, including:
 - Regional analysis
 - Customer profitability
 - Discount impact
-- Annual and monthly trends
+- Annual and monthly sales trends
 - Shipping performance
 - Customer segment analysis
 
 ## Power BI Dashboard
 
-The interactive report contains two pages.
+The interactive Power BI report contains two pages.
 
-**1. Executive Overview**
+### 1. Executive Overview
+
 - Total Sales
 - Total Profit
 - Total Orders
@@ -223,12 +168,36 @@ The interactive report contains two pages.
 - Profit by Category
 - Monthly Sales Trend
 
-**2. Sales & Customer Analysis**
+### 2. Sales & Customer Analysis
+
 - Sales by Region
 - Top 10 Products by Sales
 - Top 10 Most Profitable Customers
 - Sales by Customer Segment
 - Interactive Year, Region, and Category filters
+
+## Project Structure
+
+```text
+sales-performance-analysis/
+│
+├── dashboard/
+│   ├── dashboard_screenshots/
+│   ├── Superstore Sales Analytics.pdf
+│   └── Superstore Sales Analytics.pbix
+│
+├── data/
+│   └── superstore_final.csv
+│
+├── python/
+│   └── sales_analysis.ipynb
+│
+├── sql/
+│   └── sales_analysis.sql
+│
+├── .gitignore
+└── README.md
+```
 
 ## Business Recommendations
 
