@@ -2,6 +2,43 @@
 
 ## Project Overview
 
+An end-to-end data analytics project based on the Sample Superstore dataset (2014–2017).
+
+The goal of this project is to analyze sales performance, profitability, customer behavior, product performance, discount impact, and shipping operations to identify business trends and provide data-driven recommendations.
+
+## Business Objectives
+
+- Analyze overall sales and profit performance.
+- Identify the most and least profitable product categories.
+- Evaluate regional and customer segment performance.
+- Investigate the relationship between discounts and profitability.
+- Analyze monthly and annual sales trends.
+- Evaluate shipping processing time across shipping methods.
+
+## Tools & Technologies
+
+| Tool | Purpose |
+|---|---|
+| Python (Pandas, Matplotlib) | Data cleaning, exploration and analysis |
+| PostgreSQL | Data storage and SQL analysis |
+| SQL | Business queries and aggregations |
+| Power BI | Interactive dashboard and visualization |
+| Git & GitHub | Version control and project documentation |
+
+## Dataset
+
+**Sample Superstore Dataset**
+
+- Period: 2014–2017
+- Records: 9,994
+- Unique orders: 5,009
+- Unique customers: 793
+- Original columns: 21
+- Final dataset columns: 25
+
+## Key Performance Indicators
+
+| Metric | Result |
 An end-to-end data analytics project focused on analyzing retail sales, profitability, customer behavior, product performance, discount impact, and shipping operations.
 
 The project demonstrates a complete analytical workflow, from data preparation and exploratory analysis to SQL-based business analysis and interactive Power BI reporting.
