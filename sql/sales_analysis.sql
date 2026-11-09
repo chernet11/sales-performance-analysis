@@ -35,17 +35,12 @@ SELECT
 FROM public.superstore;
 
 
--- Check duplicate rows
+-- Check duplicate rows across all columns
 
 SELECT
-    COUNT(*) - COUNT(DISTINCT ROW(
-        "Order ID",
-        "Product ID",
-        "Sales",
-        "Profit",
-        "Quantity",
-        "Discount"
-    )) AS duplicate_records
+    COUNT(*) - COUNT(DISTINCT to_jsonb(s)) AS duplicate_records
+FROM public.superstore AS s;
+
 -- 3. SALES AND PROFITABILITY BY CATEGORY
 
 SELECT
@@ -59,7 +54,7 @@ SELECT
     ) AS profit_margin_pct
 FROM public.superstore
 GROUP BY "Category"
-ORDER BY total_sales DESC;FROM public.superstore;
+ORDER BY total_sales DESC;
 
 -- 4. SALES AND PROFIT BY REGION
 
@@ -282,4 +277,26 @@ SELECT
 FROM public.superstore
 GROUP BY "Region", "Category"
 ORDER BY "Region", total_profit DESC;
+
+-- 17. CATEGORY PROFITABILITY ANALYSIS USING CTE
+
+WITH category_metrics AS (
+    SELECT
+        "Category",
+        SUM("Sales") AS total_sales,
+        SUM("Profit") AS total_profit
+    FROM public.superstore
+    GROUP BY "Category"
+)
+
+SELECT
+    "Category",
+    ROUND(total_sales::numeric, 2) AS total_sales,
+    ROUND(total_profit::numeric, 2) AS total_profit,
+    ROUND(
+        (total_profit / NULLIF(total_sales, 0) * 100)::numeric,
+        2
+    ) AS profit_margin_pct
+FROM category_metrics
+ORDER BY total_profit DESC;
 
